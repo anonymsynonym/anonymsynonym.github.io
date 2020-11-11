@@ -8,6 +8,10 @@ Hello there! My name is Osmo, I'm a third-year bachelor student at Helsinki Univ
 
 I am originally from Hyvinkää, Finland but now live and study in Helsinki. In my free time I enjoy hiking, photography, graphic design and creative writing.
 
+## CV
+
+[View my resume](https://www.overleaf.com/read/nbdqjwpgnmbh) on Overleaf.
+
 ## Find Me on
 
 [Unibuddy](https://api.unibuddy.co/og/university-of-helsinki/buddies/students/5e74f054cd22c707fe511954?buddyPosition=share), [GitHub](https://github.com/anonymsynonym), [Instagram](https://www.instagram.com/osmomaista/) (hobbyist photography)
