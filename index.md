@@ -4,7 +4,9 @@ layout: default
 
 ## Introduction
 
-Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Hello there! My name is Osmo, I'm a third-year bachelor student at Helsinki University. I'm majoring in linguistics, a programme that covers general linguistics, phonetics and language technology. My two minors are fennougristic studies and Russian language and literature. I am particularly interested in language change, historical linguistics, sociolinguistics and the conservation of endangered languages. I also regularly take courses in different languages.
+
+I am originally from Hyvinkää, Finland but now live and study in Helsinki. In my free time I enjoy hiking, photography, graphic design and creative writing.
 
 ## Find me on
 
