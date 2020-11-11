@@ -24,11 +24,13 @@ My email address is _osmo.viskari@helsinki.fi_.
 
 [Auditory Discrimination and Phonetic Notation (5 cd.)](https://studies.helsinki.fi/opintotarjonta/cu/hy-CU-134683880-2020-08-01), autumn 2019
 
-[Russian Literature and Culture (10 cd.)](https://studies.helsinki.fi/opintotarjonta/cu/hy-CU-117920093-2020-08-01), autumn 2019 to spring 2020
+[Russian Literature and Culture (10 cd.)](https://studies.helsinki.fi/opintotarjonta/cu/hy-CU-117920093-2020-08-01), autumn 2019 – spring 2020
 
 ## Projects
 
 [cmdline-course](https://github.com/anonymsynonym/cmdline-course) on GitHub: tba.
+
+The Semantics of Finnish Non-Factive Mental Verbs: tba.
 
 ## Misc.
 
@@ -41,7 +43,7 @@ My email address is _osmo.viskari@helsinki.fi_.
 * Russian — B1  
 * French — A1
 
-Dabbled in: Karelian, Latin, Basque, Hungarian, Mongolian
+Dabbled in: Karelian, Latin, Hungarian, Basque, Mongolian
 
 ### Music Recommendations
 
