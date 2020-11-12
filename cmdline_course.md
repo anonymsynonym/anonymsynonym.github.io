@@ -21,17 +21,17 @@ Possibly the most useful and eye-opening thing that I learned was how to use tab
 Here's a made-up example, demonstrating this week's most important commands:
 
 ```
-whoami
-pwd
-wget https://www.madeupwebsite.com/1234.txt
-less 1234.txt
-mv 1234.txt file.txt
-cat file.txt
-mkdir folder
-cp file.txt folder/copy.txt
-rm file.txt
-ls -a
-cd folder/
+$ whoami
+$ pwd
+$ wget https://www.madeupwebsite.com/1234.txt
+$ less 1234.txt
+$ mv 1234.txt file.txt
+$ cat file.txt
+$ mkdir folder
+$ cp file.txt folder/copy.txt
+$ rm file.txt
+$ ls -a
+$ cd folder/
 ```
 
 Here's what the commands above do:
@@ -55,8 +55,8 @@ During the second week we looked a bit more at the file system in Unix – what 
 Last week we learned to copy files. If I wanted to copy the whole directory that we created in the previous example, including the copy of the text file inside it, we need to add the parameter `-R` to specify that the directory is copied recursively, i.e. together with its contents. This is illustrated in the next example:
 
 ```
-cd ..
-cp -R folder/ new_folder
+$ cd ..
+$ cp -R folder/ new_folder
 ```
 
 The first command changes me back into the working directory that I started from. The second command copies the directory and its contents into a new directory. The need for `-R` goes also for removing directories with files inside them. The command `rmdir` can only delete empty directories.
@@ -76,7 +76,7 @@ I learned more about the Bash shell's syntax as we begun using the characters \|
 As an example, the following code would search the text file from the previous examples only for whole numbers (consisting of either one or multiple digits), list each of them on its own line, sort the lines of numbers from largest to smallest, remove multiple instances of the same number and redirect the result into a new text file inside the same folder.
 
 ```
-egrep -o '\b[0-9]+\b' folder/copy.txt | sort -nr | uniq > folder/copy_numbers.txt 
+$ egrep -o '\b[0-9]+\b' folder/copy.txt | sort -nr | uniq > folder/copy_numbers.txt 
 ```
 
 We also looked into the theory behind different character encoding systems and learned to convert files between them. At first I hade quite a lot of trouble getting the UTF-8 character encoding to work but finally managed to fix the issues with the Finnish ä:s and ö:s. After all that work it was a bit of a shame that the rest of the text files on following weeks only featured text in English.
@@ -88,7 +88,8 @@ The fourth week continued where the third week left off as we practiced more reg
 As an example, the following code would search the afformentioned text file for all whole numbers with exactly two digis, flip the order of the digits and write the whole text file, including the changed numbers, into a new text file. 
 
 ```
-sed -E 's/(\b([0-9])([0-9])\b)/\2\1/g' folder/copy.txt > folder/copy_flipped.txt
+$ sed -E 's/(\b([0-9])([0-9])\b)/\2\1/g' folder/copy.txt > folder/copy_flipped.txt
+```
 
 In this week's exercises we created frequency lists of tokens in a text file and looked into data about n-grams. I found this interesting and useful to learn, as I have previously only worked with word frequencies and n-grams in separate programs, namely AntConc. Using these commands together with next weeks' scripts and makefiles seems to be quite an efficient way to collect corpus statistics from a bulk of files. Though, I think that the benefits of these command line tools tend to only appear when operating with a large amount or size of text files, as searching the same corpus information from just one file would probably be done quicker in an existing program than with bash commands. 
 
@@ -108,15 +109,40 @@ When the configuration file is sourced, either by running the `source` command o
 
 ### Week 6: Installing and Running Programs
 
-6
+Week 6 started with information about the root user and the root privileges needed to run certain commands. We can switch into and from the root user by using the command `su`. Commands can also be run individually using the `sudo` command that was already introduced and used during previous weeks while installing different programs. We looked into installing programs with `apt-get` and locating their files and directories in the system with `locate` or less ideally with `find` and `grep`. We also experimented with `pip`, a packet manager specifically for installing Python programs, and with Python virtual environments that allow managing different Python installations with their own settings at the same time.
+
+Lastly, we were taught about `make` that can be used to automate the running of multiple scripts or programs in order to build a project such as a more complicated program or a directory containing for example specific data from corpora. Usually this involves a so-called makefile that includes the instructions, written in specific syntax, for `make` to compile the wanted program. If the makefile has been run before and there have been some partial changes to it, make only needs to compile the files and directories that have not yet been created.
+
+A very simple example of makefile syntax:
+
+```
+folder/copy_flipped.txt: folder/copy.txt
+    sed -E 's/(\b([0-9])([0-9])\b)/\2\1/g' $< > $@
+```
+
+This make rule performs the same command as my Week 4 example on flipping two-digit numbers. It has the target (i.e. "output file") `folder/copy_flipped.txt` (also referred to with `$@`) and the dependency (i.e. "input file") `folder/copy.txt` (also referred to with `$<`). The syntax recquires the system command to be indented. In this case, the system command is the previous sed command, and its output is redirected to the target.
+
+To me, `make` seems particularly useful for processing large amounts of corpus data, as that is the kind of information that I will most likely be examining during my studies and possible career in linguistics. I hope that these tools will be of use.
 
 ### Week 7: Version Control
 
-7
+The final week, along with the final assignment of the course, had to do with `git`, GitHub and version control. Version control refers to a system where multiple versions of files with different levels of changes are saved so that the user can easily move between the versions, revert to a previous one or replace it with some parallel branch of changes. `git` makes possible the moving and saving of files between a local repository and an online server with the same project. GitHub is a service, available for free, that allows people to share and work on open-source projects over the internet.
 
-### Final Assignment: Building Webpages using GitHub Pages
+A simple example of pushing new local changes (commits) on a remote server:
 
-F
+```
+$ git add -A
+$ git commit -m 'Some explanatory message'
+$ git push
+```
+
+Explanation of the commands:
+
+1. Adds the entire working tree (all changed files) to the index, i.e. redies them to be committed.
+2. Records the added changes to the repository, along with a short message describing the changes.
+3. Uploads the local repository content to a remote repository.
+
+GitHub also offers a possibility to host websites. This was utilised in the final assignment where my job was to create my own website using an existing template on GitHub, customise it with my own information, and write a summary of the contents and coursework of this course (as seen here). The assignment also recquired the use of Jekyll, a tool that allowed me to view and test versions of the website locally without having to push all of the unfinished changes to the remote repository and the actual website.
 
 ### Introduced Commands (and Syntax)
 
@@ -138,17 +164,17 @@ The table below is scrollable.
 | ls              | man      | head         | tr -c    | $?        | pip install        | git commit -m            |
 | mkdir           | ps       | head -n      | tr -d    |           | pip install --user | git config               |
 | mv              | rm -R    | iconv        | tr -s    |           | pip3 install       | git diff                 |
-| mv -n           | rmdir    | locale-gen   | uniq -c  |           | python             | git log                  |
-| pwd             | scp      | paste        |          |           | python -m venv     | git pull                 |
-| rm              | sleep    | tail         |          |           | python3            | git push                 |
-| touch           | sort     | tail -n      |          |           | source             | git push -u origin       |
-| tar -czvf       | ssh      | tr           |          |           | su                 | git push origin --delete |
-| whoami          | top      | tr -d        |          |           | sudo               | git reflog               |
-| wget            | which    | uniq         |          |           |                    | git remote -v            |
-| wget -h         | &        | unix2dos     |          |           |                    | git reset                |
-| wget -q         |          | wc           |          |           |                    | git reset --hard         |
-|                 |          | wc -l        |          |           |                    | git status               |
-|                 |          | \>           |          |           |                    |                          |
+| mv -n           | rmdir    | locale-gen   | uniq -c  |           | python             | git init                 |
+| pwd             | scp      | paste        |          |           | python -m venv     | git log                  |
+| rm              | sleep    | tail         |          |           | python3            | git pull                 |
+| touch           | sort     | tail -n      |          |           | source             | git push                 |
+| tar -czvf       | ssh      | tr           |          |           | su                 | git push -u origin       |
+| whoami          | top      | tr -d        |          |           | sudo               | git push origin --delete |
+| wget            | which    | uniq         |          |           |                    | git reflog               |
+| wget -h         | &        | unix2dos     |          |           |                    | git remote -v            |
+| wget -q         |          | wc           |          |           |                    | git reset                |
+|                 |          | wc -l        |          |           |                    | git reset --hard         |
+|                 |          | \>           |          |           |                    | git status               |
 |                 |          | 2\>          |          |           |                    |                          |
 |                 |          | \|           |          |           |                    |                          |
 
