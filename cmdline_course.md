@@ -8,6 +8,14 @@ I took the elective online course KIK-LG219 Commandline tools for linguis (5 cd.
 
 The course material was quite clear and easy to understand. Practicing through the exercises and testing every command on my own command-line shell helped me understand the topics. The most difficulties that I had were with the setup of different programs. Many of the programs would not work at first and needed additional prerequisite programs or alternative program versions to be installed. These possible problems weren't usually tackled in the course material, but luckily fixes for most of them could be found on Google.
 
+_Here's the local repository of this website on the Unix command-line interface:_
+
+![Command-line interface](\assets\img\bash.jpg)
+
+_Here's the local repository of this website on the Windows 10 visual interface:_
+
+![Visual interface](\assets\img\visual.jpg)
+
 ### Week 1: Introduction to Command Line Environments
 
 The introductory lecture described in short the theory behind how information in computers is stored, what programming is, what operating systems are and how they work, and what is the idea behind Unix.

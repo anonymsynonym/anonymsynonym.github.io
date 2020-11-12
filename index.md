@@ -32,9 +32,11 @@ My email address is _osmo.viskari@helsinki.fi_.
 
 ## Projects
 
-[cmdline-course](https://github.com/anonymsynonym/cmdline-course) on GitHub: tba.
+* **[cmdline-course](https://github.com/anonymsynonym/cmdline-course) on GitHub**  
+  Part of the coursework for KIK-LG219 Commandline Tools for Linguists (5 cd.). The remote repository exercises were about processing corpus data with Make.
 
-The Semantics of Finnish Non-Factive Mental Verbs: tba.
+* **The Semantics of Finnish Non-Factive Mental Verbs**  
+  The bachelor's thesis that I'm currently working on for my degree in linguistics. (No link yet.)
 
 ## Misc.
 
